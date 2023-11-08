@@ -62,6 +62,8 @@ else()
     add_library(${LIB_TARGET} ${LIB_SOURCES})
 endif()
 
+target_include_directories(${LIB_TARGET} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
 target_link_libraries(${LIB_TARGET} m)
 set_target_properties(${LIB_TARGET} PROPERTIES PUBLIC_HEADER "${LIB_PUBLIC_HEADERS}")
 
